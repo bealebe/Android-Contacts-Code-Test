@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.demo.bryanbeale.codetestbryanbeale">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_main"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:authorities="com.demo.bryanbeale.codetestbryanbeale.Services.GenericFileProvider"
+            android:name="com.demo.bryanbeale.codetestbryanbeale.Services.GenericFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <activity android:name="com.demo.bryanbeale.codetestbryanbeale.Activities.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
+        <activity android:name="com.demo.bryanbeale.codetestbryanbeale.Activities.SplashScreen"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.demo.bryanbeale.codetestbryanbeale.Activities.ContactDetailActivity"
+            android:label="@string/title_activity_contact_detail"
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+
+    </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+</manifest>

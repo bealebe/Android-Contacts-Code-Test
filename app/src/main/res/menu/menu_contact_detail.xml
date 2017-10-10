@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.demo.bryanbeale.codetestbryanbeale.Activities.ContactDetailActivity">
+
+    <item
+        android:id="@+id/action_change_image"
+        android:orderInCategory="100"
+        android:title="Change Profile Picture"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_change_image"/>
+
+</menu>

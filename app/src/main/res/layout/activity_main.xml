@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.demo.bryanbeale.codetestbryanbeale.Activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search Contacts"
+            android:backgroundTint="@color/colorPrimary"
+            android:clickable="true"
+            android:iconifiedByDefault="false"
+            android:background="@color/colorPrimary"/>
+<android.support.v4.widget.SwipeRefreshLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/search_bar"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true"
+    android:id="@+id/swiper">
+    <ListView
+        android:id="@+id/contact_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_bar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"/>
+
+</android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="28dp"
+            app:elevation="10dp"
+            app:fabSize="normal"
+            app:backgroundTint="@color/colorAccent"
+            android:src="@drawable/ic_person_add"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp"
+            android:layout_marginRight="28dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="30dp"/>
+
+    </RelativeLayout>
+</layout>
